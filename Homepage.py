@@ -15,6 +15,10 @@ import streamlit as st
 # main(['install','google-auth'])
 # main(['install','google-auth-httplib2'])
 
+import subprocess
+
+subprocess.call([sys.executable, 'pip', 'uninstall', 'opencv-python'])
+
 
 
 st.set_page_config(layout="wide", page_title="Hello Page")

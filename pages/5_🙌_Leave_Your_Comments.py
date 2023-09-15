@@ -1,7 +1,12 @@
 from datetime import datetime
-from blind_watermark import db
 import streamlit as st
+import os
+dir_path = os.path.split(os.path.realpath(__file__))[0]
+import sys
+sys.path.append(dir_path)
 
+import blind_watermark
+from blind_watermark import db
 st.set_page_config(
     page_title="Leave Your Comments",
     page_icon=":Raising Hands:",

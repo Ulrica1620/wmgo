@@ -17,7 +17,7 @@ import sys
 
 import subprocess
 
-subprocess.call([sys.executable, 'pip', 'uninstall', 'opencv-python'])
+subprocess.run('pip uninstall opencv-python')
 
 
 

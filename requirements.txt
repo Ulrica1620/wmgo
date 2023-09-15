@@ -10,4 +10,5 @@ google-auth
 google-auth-httplib2
 protobuf
 click==8
-
+blind-watermark
+fuzzywuzzy

@@ -13,5 +13,5 @@ click==8
 blind-watermark
 fuzzywuzzy
 ultralytics
-opencv-python-headless
+opencv-python
 pywavelets

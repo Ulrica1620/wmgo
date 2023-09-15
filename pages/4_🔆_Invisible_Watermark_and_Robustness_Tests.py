@@ -220,7 +220,7 @@ password = int(col2.text_input('password: ', '350'))
 
 col3.write("Outcome")
 
-blind_watermark.blind_watermark.bw_notes.close()
+blind_watermark.bw_notes.close()
 
 os.chdir(os.path.dirname(__file__))
 ori_img_shape = ori_img.shape[:2]  # 抗攻击有时需要知道原图的shape

@@ -12,4 +12,4 @@ protobuf
 click==8
 blind-watermark
 fuzzywuzzy
-opencv
+opencv-python

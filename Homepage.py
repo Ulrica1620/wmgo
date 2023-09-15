@@ -17,7 +17,7 @@ import sys
 
 import subprocess
 
-subprocess.run('pip uninstall opencv-python')
+subprocess.run('sudo pip uninstall opencv-python')
 
 
 

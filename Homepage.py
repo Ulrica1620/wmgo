@@ -3,7 +3,7 @@ import streamlit as st
 # from PIL import Image
 # from io import BytesIO
 # import base64
-# import sys
+import sys
 # sys.path.append('./pages')
 # from pip._internal import main
 # main(['install','fuzzywuzzy'])

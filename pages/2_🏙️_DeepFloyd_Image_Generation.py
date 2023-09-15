@@ -65,8 +65,8 @@ col1, col2, col3 = st.columns([3,2,3])
 col1.image(Image.open(dir_path+'/image outcome/style transfer/ori.jpg'))
 genre = col2.radio(
     "What's your favorite style",
-    [":rainbow[Lego]", "***Zombie***", "Origami","Anime :movie_camera:"],
-    captions = ["####adding comments####.", "####adding comments####.", "####adding comments####.", "####adding comments####."])
+    [":rainbow[Lego]", "***Zombie***", "Origami","Anime :movie_camera:"])
+#,captions = ["####adding comments####.", "####adding comments####.", "####adding comments####.", "####adding comments####."])
 if genre == ":rainbow[Lego]":
     col3.image(Image.open(dir_path+'/image outcome/style transfer/lego.jpg'))
 elif genre == "***Zombie***":

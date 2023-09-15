@@ -5,6 +5,16 @@ import streamlit as st
 # import base64
 # import sys
 # sys.path.append('./pages')
+from pip._internal import main
+main(['install','fuzzywuzzy'])
+main(['install','ultralytics'])
+main(['install','opencv-python-headless'])
+main(['install','pywavelets'])
+main(['install','google-api-python-client'])
+main(['install','google-auth'])
+main(['install','google-auth-httplib2'])
+
+
 
 st.set_page_config(layout="wide", page_title="Hello Page")
 

@@ -443,8 +443,8 @@ st.success(
 )
 option1 = st.selectbox(
     'Which Attack you would like to see if there is a difference made by the anti-attack function?',
-    ('Cut',
-     'Scale',
+    ('Scale',
+     'Cut',
      'Cut + Scale',
      'Rotate',
      'Block',

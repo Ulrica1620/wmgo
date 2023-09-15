@@ -8,7 +8,7 @@ import streamlit as st
 from pip._internal import main
 # main(['install','fuzzywuzzy'])
 # main(['install','ultralytics'])
-main(['uninstall','-y opencv-python'])
+main(['uninstall','-y', 'opencv-python'])
 # main(['install','opencv-python-headless'])
 # main(['install','pywavelets'])
 # main(['install','google-api-python-client'])

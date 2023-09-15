@@ -259,8 +259,8 @@ st.markdown("""
 st.subheader('Without Reverse Fuction: Pure Attack&Extract')
 option = st.selectbox(
     'Which Attack you would apply to the watermarked picture?',
-    ('Cut',
-     'Scale',
+    ('Scale',
+     'Cut',
      'Cut + Scale',
      'Rotate',
      'Block',

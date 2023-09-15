@@ -5,7 +5,7 @@ import streamlit as st
 # import base64
 # import sys
 # sys.path.append('./pages')
-from pip._internal import main
+# from pip._internal import main
 # main(['install','fuzzywuzzy'])
 # main(['install','ultralytics'])
 # main(['uninstall','opencv-python'])

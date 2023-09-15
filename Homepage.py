@@ -3,21 +3,21 @@ import streamlit as st
 # from PIL import Image
 # from io import BytesIO
 # import base64
-import sys
+# import sys
 # sys.path.append('./pages')
-# from pip._internal import main
+from pip._internal import main
 # main(['install','fuzzywuzzy'])
 # main(['install','ultralytics'])
-# main(['uninstall','opencv-python'])
+main(['uninstall','opencv-python'])
 # main(['install','opencv-python-headless'])
 # main(['install','pywavelets'])
 # main(['install','google-api-python-client'])
 # main(['install','google-auth'])
 # main(['install','google-auth-httplib2'])
 
-import subprocess
+# import subprocess
 
-subprocess.run('sudo pip uninstall opencv-python')
+# subprocess.run('sudo pip uninstall opencv-python')
 
 
 

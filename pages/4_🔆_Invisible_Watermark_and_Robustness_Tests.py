@@ -184,13 +184,14 @@ if my_upload is not None:
     if my_upload.size > MAX_FILE_SIZE:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
-        upload=my_upload
+        upload=Image.open(my_upload)
+        img = upload.save("img.jpg")
+        ori_img = cv2.imread("img.jpg")
 else:
     upload = Image.open(dir_path+'/image outcome/invisible watermark/NewYork.jpg')
+    ori_img = cv2.imread(dir_path+'/image outcome/invisible watermark/NewYork.jpg')
 
 image = upload# Image.open(upload)
-img = image.save("ori_img.jpg")
-ori_img = cv2.imread("ori_img.jpg")
 
 col1.write("\n")
 col1.image(image)

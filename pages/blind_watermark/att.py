@@ -255,7 +255,7 @@ def fft_att(input_filename=None, input_img=None, output_file_name=None):
     return filtered_img, minn, maxx, Cropshape
 
 
-def fft_att_2(input_filename=None, image=None, output_file_name=None, threshold = 25):
+def fft_att2(input_filename=None, image=None, output_file_name=None, threshold = 25):
     if input_filename:
         image = cv2.imread(input_filename)
     img_shape = image.shape

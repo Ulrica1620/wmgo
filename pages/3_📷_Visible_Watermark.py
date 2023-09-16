@@ -39,19 +39,28 @@ col1.write("Original Image")
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 my_upload = col1.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
+img = Image.open(img)
+img = img.save("img.jpg")
+
+# OpenCv Read
+img = cv2.imread("img.jpg")
+
+
 if my_upload is not None:
     if my_upload.size > MAX_FILE_SIZE:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
-        upload=my_upload
-        # ori = cv2.imread(my_upload)
-        ori = np.array(upload)
+        upload= Image.open(my_upload)
+        
+        # ori = np.array(upload)
 else:
     upload = Image.open(dir_path+'/image outcome/visible watermark/ori.png')
-    ori = cv2.imread(dir_path+'/image outcome/visible watermark/ori.png')
+    # ori = cv2.imread(dir_path+'/image outcome/visible watermark/ori.png')
 
-image = upload# Image.open(upload)
+image = upload
 col1.image(image)
+img = image.save("img.jpg")
+ori = cv2.imread("img.jpg")
 
 col2.write("Watermark")
 my_upload2 = col2.file_uploader("Upload the watermark", type=["png", "jpg", "jpeg"])
@@ -60,15 +69,17 @@ if my_upload2 is not None:
     if my_upload2.size > MAX_FILE_SIZE:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
-        upload2=my_upload2
+        upload2=Image.open(my_upload2)
         # wm = cv2.imread(my_upload2)
-        wm = np.array(upload2)
+        #wm = np.array(upload2)
 else:
     upload2 = Image.open(dir_path+'/image outcome/visible watermark/esperantowatermark.png')
-    wm = cv2.imread(dir_path+'/image outcome/visible watermark/esperantowatermark.png')
+    # wm = cv2.imread(dir_path+'/image outcome/visible watermark/esperantowatermark.png')
 
 image2 = upload2# Image.open(upload)
 col2.image(image2)
+img2 = image2.save("img2.jpg")
+wm = cv2.imread("img2.jpg")
 
 def convert_image(img):
     buf = BytesIO()

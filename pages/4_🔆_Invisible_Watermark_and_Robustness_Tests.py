@@ -542,7 +542,7 @@ if option1 == 'Fourier Attack':
     threshold2 = int(col1.text_input('Please provide your Attacking parameters: threshold = ', 25))
     password_1 = int(col2.text_input('Please input your password for extracting watermark:', '350'))
     # Attacked = cv2.imread('Attacked_'+option1+'.jpg')
-    Attacked, filtered = att.fft_att2(image=watermarked, threshold=int(threshold))
+    Attacked, filtered = fft_att2(image=watermarked, threshold=int(threshold))
     gray_recover=watermarked.astype(np.float32)[:,:,0]
     img_recover = att.anti_fft_att2(input_img=Attacked, color1 = filtered[:, :, 1], color2 = filtered[:, :, 2], threshold = threshold2)
     img_recover[:,:,0] = gray_recover

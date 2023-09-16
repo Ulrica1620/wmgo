@@ -44,7 +44,7 @@ if my_upload is not None:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
         upload= Image.open(my_upload)
-        img = image.save("img.jpg")
+        img = upload.save("img.jpg")
         ori = cv2.imread("img.jpg")
         # ori = np.array(upload)
 else:

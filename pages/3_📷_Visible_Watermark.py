@@ -39,13 +39,6 @@ col1.write("Original Image")
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 my_upload = col1.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
-img = Image.open(img)
-img = img.save("img.jpg")
-
-# OpenCv Read
-img = cv2.imread("img.jpg")
-
-
 if my_upload is not None:
     if my_upload.size > MAX_FILE_SIZE:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")

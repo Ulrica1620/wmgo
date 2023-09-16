@@ -9,6 +9,7 @@ sys.path.append(dir_path)
 import blind_watermark
 from blind_watermark import WaterMark
 from blind_watermark import att
+from blibnd_watermark.att import fft_att_2
 from blind_watermark.recover import estimate_crop_parameters, recover_crop
 import cv2
 import numpy as np
@@ -366,7 +367,7 @@ elif option == 'Adjust Brightness':
 elif option == 'Fourier Attack':
     threshold = float(st.text_input('Please input your Attacking parameters(if any): threshold = ', 25))
     password_1 = int(st.text_input('Please input your password for extracting the watermark:', password))
-    Attacked, filtered = att.fft_att2(image=watermarked, threshold=25)
+    Attacked, filtered = fft_att_2(image=watermarked, threshold=25)
     Attacked1 = att.resize_att(input_img=watermarked, out_shape=(w -int(threshold),h-int(threshold) * 2))
     cv2.imwrite('Attacked_'+option+'.jpg', Attacked)
     bwm1 = WaterMark(password_wm=password_1, password_img=1)

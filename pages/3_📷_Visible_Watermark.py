@@ -44,7 +44,8 @@ if my_upload is not None:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
         upload=my_upload
-        ori = cv2.imread(my_upload)
+        # ori = cv2.imread(my_upload)
+        ori = np.array(upload)
 else:
     upload = Image.open(dir_path+'/image outcome/visible watermark/ori.png')
     ori = cv2.imread(dir_path+'/image outcome/visible watermark/ori.png')
@@ -60,7 +61,8 @@ if my_upload2 is not None:
         st.error("The uploaded file is too large. Please upload an image smaller than 5MB.")
     else:
         upload2=my_upload2
-        wm = cv2.imread(my_upload2)
+        # wm = cv2.imread(my_upload2)
+        wm = np.array(upload2)
 else:
     upload2 = Image.open(dir_path+'/image outcome/visible watermark/esperantowatermark.png')
     wm = cv2.imread(dir_path+'/image outcome/visible watermark/esperantowatermark.png')

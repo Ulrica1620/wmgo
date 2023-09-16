@@ -9,7 +9,7 @@ sys.path.append(dir_path)
 import blind_watermark
 from blind_watermark import WaterMark
 from blind_watermark import att
-from blibnd_watermark.att import fft_att_2
+from blind_watermark.att import fft_att_2
 from blind_watermark.recover import estimate_crop_parameters, recover_crop
 import cv2
 import numpy as np

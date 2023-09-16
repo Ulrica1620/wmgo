@@ -12,8 +12,7 @@ from blind_watermark import att
 from blind_watermark.recover import estimate_crop_parameters, recover_crop
 import cv2
 import numpy as np
-from importlib import reload # reload 
-reload(att)
+
 
 from fuzzywuzzy import fuzz
 

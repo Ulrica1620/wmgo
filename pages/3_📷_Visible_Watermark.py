@@ -55,7 +55,7 @@ image = upload
 col1.image(image)
 
 col2.write("Watermark")
-my_upload2 = col2.file_uploader("Upload the watermark", type=["png", "jpg", "jpeg"])
+my_upload2 = col2.file_uploader("Upload the watermark, a transparant background will reach better outcome", type=["png", "jpg", "jpeg"])
 
 if my_upload2 is not None:
     if my_upload2.size > MAX_FILE_SIZE:

@@ -6,7 +6,7 @@ dir_path = os.path.split(os.path.realpath(__file__))[0]
 import sys
 sys.path.append(dir_path)
 
-import blind_watermark
+# import blind_watermark
 from blind_watermark import WaterMark
 from blind_watermark import att
 from blind_watermark.att import fft_att_2
